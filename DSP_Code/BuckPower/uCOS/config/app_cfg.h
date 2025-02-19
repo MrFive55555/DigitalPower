@@ -45,9 +45,8 @@
 #define  APP_CFG_TASK_START_PRIO                      2u
 #define  APP_CFG_TASK_PEND_PRIO                       3u
 #define  APP_CFG_TASK_POST_PRIO                       4u
-#define create_task_prio 5u
-#define measure_task_prio 7u
-#define communication_task_prio 6u
+#define  main_task_prio 5u
+
 
 
 /*

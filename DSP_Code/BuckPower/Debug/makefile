@@ -45,6 +45,10 @@ ORDERED_OBJS += \
 "./uCOS/uC-CPU/C28x/CCS/cpu_a.obj" \
 "./uCOS/uC-CPU/C28x/CCS/cpu_c.obj" \
 "./uCOS/uC-CPU/cpu_core.obj" \
+"./uCOS/uC-LIB/lib_ascii.obj" \
+"./uCOS/uC-LIB/lib_math.obj" \
+"./uCOS/uC-LIB/lib_mem.obj" \
+"./uCOS/uC-LIB/lib_str.obj" \
 "./uCOS/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a.obj" \
 "./uCOS/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_c.obj" \
 "./uCOS/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_i.obj" \
@@ -77,6 +81,7 @@ RMDIR := RMDIR /S/Q
 -include targetConfigs/subdir_vars.mk
 -include uCOS/uC-CPU/C28x/CCS/subdir_vars.mk
 -include uCOS/uC-CPU/subdir_vars.mk
+-include uCOS/uC-LIB/subdir_vars.mk
 -include uCOS/uCOS-II/Ports/C28x/Generic/CCS/subdir_vars.mk
 -include uCOS/uCOS-II/Source/subdir_vars.mk
 -include Hardware/subdir_rules.mk
@@ -85,6 +90,7 @@ RMDIR := RMDIR /S/Q
 -include targetConfigs/subdir_rules.mk
 -include uCOS/uC-CPU/C28x/CCS/subdir_rules.mk
 -include uCOS/uC-CPU/subdir_rules.mk
+-include uCOS/uC-LIB/subdir_rules.mk
 -include uCOS/uCOS-II/Ports/C28x/Generic/CCS/subdir_rules.mk
 -include uCOS/uCOS-II/Source/subdir_rules.mk
 -include objects.mk
@@ -205,9 +211,9 @@ BuckPower.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
 	-$(RM) "Hardware\ADC.obj" "Hardware\PWM.obj" "Hardware\Tool.obj" "Hardware\Uart.obj" "Hardware\UserSet.obj" "Stdlib\src\DSP2833x_ADC_cal.obj" "Stdlib\src\DSP2833x_Adc.obj" "Stdlib\src\DSP2833x_CSMPasswords.obj" "Stdlib\src\DSP2833x_CodeStartBranch.obj" "Stdlib\src\DSP2833x_CpuTimers.obj" "Stdlib\src\DSP2833x_DBGIER.obj" "Stdlib\src\DSP2833x_DMA.obj" "Stdlib\src\DSP2833x_DefaultIsr.obj" "Stdlib\src\DSP2833x_DisInt.obj" "Stdlib\src\DSP2833x_ECan.obj" "Stdlib\src\DSP2833x_ECap.obj" "Stdlib\src\DSP2833x_EPwm.obj" "Stdlib\src\DSP2833x_EQep.obj" "Stdlib\src\DSP2833x_GlobalVariableDefs.obj" "Stdlib\src\DSP2833x_Gpio.obj" "Stdlib\src\DSP2833x_I2C.obj" "Stdlib\src\DSP2833x_Mcbsp.obj" "Stdlib\src\DSP2833x_MemCopy.obj" "Stdlib\src\DSP2833x_PieCtrl.obj" "Stdlib\src\DSP2833x_PieVect.obj" "Stdlib\src\DSP2833x_Sci.obj" "Stdlib\src\DSP2833x_Spi.obj" "Stdlib\src\DSP2833x_SysCtrl.obj" "Stdlib\src\DSP2833x_Xintf.obj" "Stdlib\src\DSP2833x_usDelay.obj" "User\main.obj" "User\os_var.obj" "uCOS\uC-CPU\C28x\CCS\cpu_a.obj" 
-	-$(RM) "uCOS\uC-CPU\C28x\CCS\cpu_c.obj" "uCOS\uC-CPU\cpu_core.obj" "uCOS\uCOS-II\Ports\C28x\Generic\CCS\os_cpu_a.obj" "uCOS\uCOS-II\Ports\C28x\Generic\CCS\os_cpu_c.obj" "uCOS\uCOS-II\Ports\C28x\Generic\CCS\os_cpu_i.obj" "uCOS\uCOS-II\Ports\C28x\Generic\CCS\os_dbg.obj" "uCOS\uCOS-II\Source\os_core.obj" "uCOS\uCOS-II\Source\os_flag.obj" "uCOS\uCOS-II\Source\os_mbox.obj" "uCOS\uCOS-II\Source\os_mem.obj" "uCOS\uCOS-II\Source\os_mutex.obj" "uCOS\uCOS-II\Source\os_q.obj" "uCOS\uCOS-II\Source\os_sem.obj" "uCOS\uCOS-II\Source\os_task.obj" "uCOS\uCOS-II\Source\os_time.obj" "uCOS\uCOS-II\Source\os_tmr.obj" 
-	-$(RM) "Hardware\ADC.d" "Hardware\PWM.d" "Hardware\Tool.d" "Hardware\Uart.d" "Hardware\UserSet.d" "Stdlib\src\DSP2833x_Adc.d" "Stdlib\src\DSP2833x_CpuTimers.d" "Stdlib\src\DSP2833x_DMA.d" "Stdlib\src\DSP2833x_DefaultIsr.d" "Stdlib\src\DSP2833x_ECan.d" "Stdlib\src\DSP2833x_ECap.d" "Stdlib\src\DSP2833x_EPwm.d" "Stdlib\src\DSP2833x_EQep.d" "Stdlib\src\DSP2833x_GlobalVariableDefs.d" "Stdlib\src\DSP2833x_Gpio.d" "Stdlib\src\DSP2833x_I2C.d" "Stdlib\src\DSP2833x_Mcbsp.d" "Stdlib\src\DSP2833x_MemCopy.d" "Stdlib\src\DSP2833x_PieCtrl.d" "Stdlib\src\DSP2833x_PieVect.d" "Stdlib\src\DSP2833x_Sci.d" "Stdlib\src\DSP2833x_Spi.d" "Stdlib\src\DSP2833x_SysCtrl.d" "Stdlib\src\DSP2833x_Xintf.d" "User\main.d" "User\os_var.d" "uCOS\uC-CPU\C28x\CCS\cpu_c.d" "uCOS\uC-CPU\cpu_core.d" "uCOS\uCOS-II\Ports\C28x\Generic\CCS\os_cpu_c.d" "uCOS\uCOS-II\Ports\C28x\Generic\CCS\os_dbg.d" "uCOS\uCOS-II\Source\os_core.d" "uCOS\uCOS-II\Source\os_flag.d" "uCOS\uCOS-II\Source\os_mbox.d" "uCOS\uCOS-II\Source\os_mem.d" "uCOS\uCOS-II\Source\os_mutex.d" 
-	-$(RM) "uCOS\uCOS-II\Source\os_q.d" "uCOS\uCOS-II\Source\os_sem.d" "uCOS\uCOS-II\Source\os_task.d" "uCOS\uCOS-II\Source\os_time.d" "uCOS\uCOS-II\Source\os_tmr.d" 
+	-$(RM) "uCOS\uC-CPU\C28x\CCS\cpu_c.obj" "uCOS\uC-CPU\cpu_core.obj" "uCOS\uC-LIB\lib_ascii.obj" "uCOS\uC-LIB\lib_math.obj" "uCOS\uC-LIB\lib_mem.obj" "uCOS\uC-LIB\lib_str.obj" "uCOS\uCOS-II\Ports\C28x\Generic\CCS\os_cpu_a.obj" "uCOS\uCOS-II\Ports\C28x\Generic\CCS\os_cpu_c.obj" "uCOS\uCOS-II\Ports\C28x\Generic\CCS\os_cpu_i.obj" "uCOS\uCOS-II\Ports\C28x\Generic\CCS\os_dbg.obj" "uCOS\uCOS-II\Source\os_core.obj" "uCOS\uCOS-II\Source\os_flag.obj" "uCOS\uCOS-II\Source\os_mbox.obj" "uCOS\uCOS-II\Source\os_mem.obj" "uCOS\uCOS-II\Source\os_mutex.obj" "uCOS\uCOS-II\Source\os_q.obj" "uCOS\uCOS-II\Source\os_sem.obj" "uCOS\uCOS-II\Source\os_task.obj" "uCOS\uCOS-II\Source\os_time.obj" "uCOS\uCOS-II\Source\os_tmr.obj" 
+	-$(RM) "Hardware\ADC.d" "Hardware\PWM.d" "Hardware\Tool.d" "Hardware\Uart.d" "Hardware\UserSet.d" "Stdlib\src\DSP2833x_Adc.d" "Stdlib\src\DSP2833x_CpuTimers.d" "Stdlib\src\DSP2833x_DMA.d" "Stdlib\src\DSP2833x_DefaultIsr.d" "Stdlib\src\DSP2833x_ECan.d" "Stdlib\src\DSP2833x_ECap.d" "Stdlib\src\DSP2833x_EPwm.d" "Stdlib\src\DSP2833x_EQep.d" "Stdlib\src\DSP2833x_GlobalVariableDefs.d" "Stdlib\src\DSP2833x_Gpio.d" "Stdlib\src\DSP2833x_I2C.d" "Stdlib\src\DSP2833x_Mcbsp.d" "Stdlib\src\DSP2833x_MemCopy.d" "Stdlib\src\DSP2833x_PieCtrl.d" "Stdlib\src\DSP2833x_PieVect.d" "Stdlib\src\DSP2833x_Sci.d" "Stdlib\src\DSP2833x_Spi.d" "Stdlib\src\DSP2833x_SysCtrl.d" "Stdlib\src\DSP2833x_Xintf.d" "User\main.d" "User\os_var.d" "uCOS\uC-CPU\C28x\CCS\cpu_c.d" "uCOS\uC-CPU\cpu_core.d" "uCOS\uC-LIB\lib_ascii.d" "uCOS\uC-LIB\lib_math.d" "uCOS\uC-LIB\lib_mem.d" "uCOS\uC-LIB\lib_str.d" "uCOS\uCOS-II\Ports\C28x\Generic\CCS\os_cpu_c.d" "uCOS\uCOS-II\Ports\C28x\Generic\CCS\os_dbg.d" "uCOS\uCOS-II\Source\os_core.d" "uCOS\uCOS-II\Source\os_flag.d" 
+	-$(RM) "uCOS\uCOS-II\Source\os_mbox.d" "uCOS\uCOS-II\Source\os_mem.d" "uCOS\uCOS-II\Source\os_mutex.d" "uCOS\uCOS-II\Source\os_q.d" "uCOS\uCOS-II\Source\os_sem.d" "uCOS\uCOS-II\Source\os_task.d" "uCOS\uCOS-II\Source\os_time.d" "uCOS\uCOS-II\Source\os_tmr.d" 
 	-$(RM) "Stdlib\src\DSP2833x_ADC_cal.d" "Stdlib\src\DSP2833x_CSMPasswords.d" "Stdlib\src\DSP2833x_CodeStartBranch.d" "Stdlib\src\DSP2833x_DBGIER.d" "Stdlib\src\DSP2833x_DisInt.d" "Stdlib\src\DSP2833x_usDelay.d" "uCOS\uC-CPU\C28x\CCS\cpu_a.d" "uCOS\uCOS-II\Ports\C28x\Generic\CCS\os_cpu_a.d" "uCOS\uCOS-II\Ports\C28x\Generic\CCS\os_cpu_i.d" 
 	-@echo 'Finished clean'
 	-@echo ' '

@@ -117,6 +117,7 @@ User \
 targetConfigs \
 uCOS/uC-CPU/C28x/CCS \
 uCOS/uC-CPU \
+uCOS/uC-LIB \
 uCOS/uCOS-II/Ports/C28x/Generic/CCS \
 uCOS/uCOS-II/Source \
 

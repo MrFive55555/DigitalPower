@@ -85,7 +85,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="uCOS/uC-LIB/lib_str.c|uCOS/uC-LIB/lib_mem.c|uCOS/uC-LIB/lib_math.c|uCOS/uC-LIB/lib_ascii.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -177,7 +177,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="uCOS/uC-LIB/lib_str.c|uCOS/uC-LIB/lib_mem.c|uCOS/uC-LIB/lib_math.c|uCOS/uC-LIB/lib_ascii.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

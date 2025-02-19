@@ -1,0 +1,8 @@
+
+**** Build of configuration Debug for project BuckPower ****
+
+"D:\\TI\\ccs\\utils\\bin\\gmake" -k -j 16 all -O 
+ 
+gmake[1]: 'BuckPower.out' is up to date.
+
+**** Build Finished ****

@@ -1,0 +1,92 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../Hardware/ADC.c \
+../Hardware/Button.c \
+../Hardware/CAN.c \
+../Hardware/EEPROM.c \
+../Hardware/IIC.c \
+../Hardware/Interrupt.c \
+../Hardware/Lcd.c \
+../Hardware/Led.c \
+../Hardware/Math.c \
+../Hardware/Pwm.c \
+../Hardware/SPI.c \
+../Hardware/Uart.c 
+
+C_DEPS += \
+./Hardware/ADC.d \
+./Hardware/Button.d \
+./Hardware/CAN.d \
+./Hardware/EEPROM.d \
+./Hardware/IIC.d \
+./Hardware/Interrupt.d \
+./Hardware/Lcd.d \
+./Hardware/Led.d \
+./Hardware/Math.d \
+./Hardware/Pwm.d \
+./Hardware/SPI.d \
+./Hardware/Uart.d 
+
+OBJS += \
+./Hardware/ADC.obj \
+./Hardware/Button.obj \
+./Hardware/CAN.obj \
+./Hardware/EEPROM.obj \
+./Hardware/IIC.obj \
+./Hardware/Interrupt.obj \
+./Hardware/Lcd.obj \
+./Hardware/Led.obj \
+./Hardware/Math.obj \
+./Hardware/Pwm.obj \
+./Hardware/SPI.obj \
+./Hardware/Uart.obj 
+
+OBJS__QUOTED += \
+"Hardware\ADC.obj" \
+"Hardware\Button.obj" \
+"Hardware\CAN.obj" \
+"Hardware\EEPROM.obj" \
+"Hardware\IIC.obj" \
+"Hardware\Interrupt.obj" \
+"Hardware\Lcd.obj" \
+"Hardware\Led.obj" \
+"Hardware\Math.obj" \
+"Hardware\Pwm.obj" \
+"Hardware\SPI.obj" \
+"Hardware\Uart.obj" 
+
+C_DEPS__QUOTED += \
+"Hardware\ADC.d" \
+"Hardware\Button.d" \
+"Hardware\CAN.d" \
+"Hardware\EEPROM.d" \
+"Hardware\IIC.d" \
+"Hardware\Interrupt.d" \
+"Hardware\Lcd.d" \
+"Hardware\Led.d" \
+"Hardware\Math.d" \
+"Hardware\Pwm.d" \
+"Hardware\SPI.d" \
+"Hardware\Uart.d" 
+
+C_SRCS__QUOTED += \
+"../Hardware/ADC.c" \
+"../Hardware/Button.c" \
+"../Hardware/CAN.c" \
+"../Hardware/EEPROM.c" \
+"../Hardware/IIC.c" \
+"../Hardware/Interrupt.c" \
+"../Hardware/Lcd.c" \
+"../Hardware/Led.c" \
+"../Hardware/Math.c" \
+"../Hardware/Pwm.c" \
+"../Hardware/SPI.c" \
+"../Hardware/Uart.c" 
+
+

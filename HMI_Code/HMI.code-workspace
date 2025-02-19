@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"tool.h": "c",
+			"var.h": "c",
+			"button.h": "c",
+			"usart.h": "c",
+			"rtthread.h": "c",
+			"rtconfig.h": "c",
+			"stm32f10x.h": "c",
+			"stm32f10x_rcc.h": "c",
+			"stm32f10x_spi.h": "c",
+			"pwm.h": "c",
+			"sys.h": "c"
+		}
+	}
+}

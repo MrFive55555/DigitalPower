@@ -1,0 +1,28 @@
+#ifndef PID_H
+#define PID_H
+#include "DSP28x_Project.h"
+typedef struct
+{
+    /**
+     *err value
+     */
+    rt_int32_t expect_value;
+    rt_int32_t total_value;
+    rt_int32_t err_value;
+    rt_int32_t last_err_value;
+    /**
+     *coefficien value
+     */
+    rt_int32_t kp_value;
+    rt_int32_t ki_value;
+    rt_int32_t kd_value;
+    /**
+     *coefficien
+     */
+    rt_int32_t kp;
+    rt_int32_t ki;
+    rt_int32_t kd;
+} PID;
+void pid_init(int32 expect_value,int32 kp,int32 ki,int32 kd);
+void fan_speed_cal(int32 now_value);
+#endif

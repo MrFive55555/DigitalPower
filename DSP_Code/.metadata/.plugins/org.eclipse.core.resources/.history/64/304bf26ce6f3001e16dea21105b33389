@@ -1,0 +1,18 @@
+/*
+ * var.h
+ *
+ *  Created on: 2023��8��17��
+ *      Author: MiniSforum
+ */
+#define OS_GLOBALS
+#include "IO.h"
+void initGlobalVar(void){
+    receiveOKFlag = 0;
+    elecData.outputVolCal = 0;
+    elecData.inputVolCal = 0;
+    elecData.tempVolCal = 0;
+    elecData.currentCal = 0;
+    useData.outputVol = 3;
+    useData.buzzEnable = 1;
+    useData.musicSwitch = 0;
+}

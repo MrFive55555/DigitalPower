@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "dsp28x_project.h": "c",
-        "userset.h": "c",
-        "io.h": "c",
-        "uart.h": "c",
-        "tool.h": "c"
-    }
-}

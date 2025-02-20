@@ -1,6 +1,0 @@
-#ifndef PID_H
-#define PID_H
-#include "sys.h"
-void pid_init(int32 expect_value,int32 kp,int32 ki,int32 kd);
-void fan_speed_cal(int32 now_value);
-#endif

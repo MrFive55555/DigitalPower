@@ -1,10 +1,10 @@
 ******************************************************************************
              TMS320C2000 Linker PC v22.6.1                     
 ******************************************************************************
->> Linked Thu Feb 20 13:16:14 2025
+>> Linked Thu Feb 20 13:37:21 2025
 
 OUTPUT FILE NAME:   <BuckPower.out>
-ENTRY POINT SYMBOL: "_c_int00"  address: 00009930
+ENTRY POINT SYMBOL: "_c_int00"  address: 0000993c
 
 
 MEMORY CONFIGURATION
@@ -15,7 +15,7 @@ PAGE 0:
   BEGIN                 00000000   00000002  00000002  00000000  RWIX
   RAMM0                 00000050   000003b0  00000000  000003b0  RWIX
   RAML0                 00008000   00001000  0000002e  00000fd2  RWIX
-  RAML1                 00009000   00001000  00000b7a  00000486  RWIX
+  RAML1                 00009000   00001000  00000b82  0000047e  RWIX
   RAML2                 0000a000   00001000  00000000  00001000  RWIX
   RAML3                 0000b000   00001000  00000000  00001000  RWIX
   ZONE7A                00200000   0000fc00  00000000  0000fc00  RWIX
@@ -80,7 +80,7 @@ PAGE 1:
   SCIC                  00007770   00000010  00000010  00000000  RWIX
   I2CA                  00007900   00000040  00000022  0000001e  RWIX
   RAML4                 0000c000   00001000  0000025c  00000da4  RWIX
-  RAML5                 0000d000   00001000  00000163  00000e9d  RWIX
+  RAML5                 0000d000   00001000  0000014c  00000eb4  RWIX
   RAML6                 0000e000   00001000  00000000  00001000  RWIX
   RAML7                 0000f000   00001000  00000000  00001000  RWIX
   ZONE7B                0020fc00   00000400  00000000  00000400  RWIX
@@ -110,34 +110,34 @@ codestart
 *          0    0000802a    00000004     
                   0000802a    00000004     DSP2833x_usDelay.obj (.TI.ramfunc)
 
-.text      0    00009000    00000b7a     
+.text      0    00009000    00000b82     
                   00009000    00000316     DSP2833x_DefaultIsr.obj (.text:retain)
                   00009316    00000186     ADC.obj (.text)
-                  0000949c    000000f7     DSP2833x_SysCtrl.obj (.text)
-                  00009593    000000ec     UserSet.obj (.text)
-                  0000967f    000000d3     Tool.obj (.text)
-                  00009752    000000c8     DSP2833x_EPwm.obj (.text)
-                  0000981a    000000b5     PWM.obj (.text)
-                  000098cf    00000061     Uart.obj (.text)
-                  00009930    00000056     rts2800_fpu32.lib : boot28.asm.obj (.text)
-                  00009986    00000047     DSP2833x_Sci.obj (.text)
-                  000099cd    0000003e     Uart.obj (.text:retain)
-                  00009a0b    0000003d     main.obj (.text)
-                  00009a48    0000002a     rts2800_fpu32.lib : l_div28.asm.obj (.text)
-                  00009a72    00000029                       : exit.c.obj (.text)
-                  00009a9b    00000028     DSP2833x_PieCtrl.obj (.text)
-                  00009ac3    00000024     rts2800_fpu32.lib : cpy_tbl.c.obj (.text)
-                  00009ae7    00000020     DSP2833x_PieVect.obj (.text)
-                  00009b07    0000001d     rts2800_fpu32.lib : memcpy.c.obj (.text)
-                  00009b24    00000014     DSP2833x_Adc.obj (.text)
-                  00009b38    00000012     os_var.obj (.text)
-                  00009b4a    00000012     rts2800_fpu32.lib : args_main.c.obj (.text)
-                  00009b5c    00000009                       : _lock.c.obj (.text)
-                  00009b65    00000008     DSP2833x_CodeStartBranch.obj (.text)
-                  00009b6d    00000007     DSP2833x_DisInt.obj (.text)
-                  00009b74    00000003     DSP2833x_DBGIER.obj (.text)
-                  00009b77    00000002     rts2800_fpu32.lib : pre_init.c.obj (.text)
-                  00009b79    00000001                       : startup.c.obj (.text)
+                  0000949c    000000f8     UserSet.obj (.text)
+                  00009594    000000f7     DSP2833x_SysCtrl.obj (.text)
+                  0000968b    000000d3     Tool.obj (.text)
+                  0000975e    000000c8     DSP2833x_EPwm.obj (.text)
+                  00009826    000000b5     PWM.obj (.text)
+                  000098db    00000061     Uart.obj (.text)
+                  0000993c    00000056     rts2800_fpu32.lib : boot28.asm.obj (.text)
+                  00009992    00000047     DSP2833x_Sci.obj (.text)
+                  000099d9    0000003e     Uart.obj (.text:retain)
+                  00009a17    00000039     main.obj (.text)
+                  00009a50    0000002a     rts2800_fpu32.lib : l_div28.asm.obj (.text)
+                  00009a7a    00000029                       : exit.c.obj (.text)
+                  00009aa3    00000028     DSP2833x_PieCtrl.obj (.text)
+                  00009acb    00000024     rts2800_fpu32.lib : cpy_tbl.c.obj (.text)
+                  00009aef    00000020     DSP2833x_PieVect.obj (.text)
+                  00009b0f    0000001d     rts2800_fpu32.lib : memcpy.c.obj (.text)
+                  00009b2c    00000014     DSP2833x_Adc.obj (.text)
+                  00009b40    00000012     os_var.obj (.text)
+                  00009b52    00000012     rts2800_fpu32.lib : args_main.c.obj (.text)
+                  00009b64    00000009                       : _lock.c.obj (.text)
+                  00009b6d    00000008     DSP2833x_CodeStartBranch.obj (.text)
+                  00009b75    00000007     DSP2833x_DisInt.obj (.text)
+                  00009b7c    00000003     DSP2833x_DBGIER.obj (.text)
+                  00009b7f    00000002     rts2800_fpu32.lib : pre_init.c.obj (.text)
+                  00009b81    00000001                       : startup.c.obj (.text)
 
 .pinit     0    00008000    00000000     UNINITIALIZED
 
@@ -212,10 +212,9 @@ ECanbMOTORegsFile
                   0000c25a    00000001     Uart.obj (.ebss)
                   0000c25b    00000001     main.obj (.ebss)
 
-.econst    1    0000d000    00000163     
+.econst    1    0000d000    0000014c     
                   0000d000    00000100     DSP2833x_PieVect.obj (.econst:_PieVectTableInit)
                   0000d100    0000004c     ADC.obj (.econst:_tempTable)
-                  0000d14c    00000017     main.obj (.econst:.string)
 
 .reset     0    003fffc0    00000002     DSECT
                   003fffc0    00000002     rts2800_fpu32.lib : boot28.asm.obj (.reset)
@@ -384,12 +383,12 @@ MODULE SUMMARY
        ------                            ----   ----------------   ------------------
     .\Hardware\
        ADC.obj                           390    84                 14                
-       UserSet.obj                       236    0                  8                 
+       UserSet.obj                       248    0                  8                 
        Tool.obj                          211    0                  0                 
        PWM.obj                           181    0                  10                
        Uart.obj                          159    4                  1                 
     +--+---------------------------------+------+------------------+--------------------+
-       Total:                            1177   88                 33                
+       Total:                            1189   88                 33                
                                                                                      
     .\Stdlib\source\
        DSP2833x_GlobalVariableDefs.obj   0      0                  2679              
@@ -411,9 +410,9 @@ MODULE SUMMARY
                                                                                      
     .\User\
        os_var.obj                        18     0                  536               
-       main.obj                          61     27                 1                 
+       main.obj                          57     4                  1                 
     +--+---------------------------------+------+------------------+--------------------+
-       Total:                            79     27                 537               
+       Total:                            75     4                  537               
                                                                                      
     D:\TI\ccs\tools\compiler\ti-cgt-c2000_22.6.1.LTS\lib\rts2800_fpu32.lib
        boot28.asm.obj                    86     0                  0                 
@@ -430,7 +429,7 @@ MODULE SUMMARY
                                                                                      
        Stack:                            0      0                  768               
     +--+---------------------------------+------+------------------+--------------------+
-       Grand Total:                      2951   395                4051              
+       Grand Total:                      2959   372                4051              
 
 
 GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
@@ -560,11 +559,11 @@ GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name
 page  address   name                            
 ----  -------   ----                            
 0     00009000  .text                           
-0     00009a72  C$$EXIT                         
-0     00009a48  L$$DIV                          
-0     00009a57  L$$MOD                          
-0     00009a65  UL$$DIV                         
-0     00009a6c  UL$$MOD                         
+0     00009a7a  C$$EXIT                         
+0     00009a50  L$$DIV                          
+0     00009a5f  L$$MOD                          
+0     00009a6d  UL$$DIV                         
+0     00009a74  UL$$MOD                         
 0     000093bd  _ADCConvertCalData              
 0     000090e6  _ADCINT_ISR                     
 0     00009316  _ADCInit                        
@@ -580,7 +579,7 @@ page  address   name
 1     00000c10  _CpuTimer2Regs                  
 1     0033fff8  _CsmPwl                         
 1     00000ae0  _CsmRegs                        
-0     00009562  _CsmUnlock                      
+0     0000965a  _CsmUnlock                      
 0     00009014  _DATALOG_ISR                    
 0     00009208  _DINTCH1_ISR                    
 0     00009212  _DINTCH2_ISR                    
@@ -588,11 +587,11 @@ page  address   name
 0     00009226  _DINTCH4_ISR                    
 0     00009230  _DINTCH5_ISR                    
 0     0000923a  _DINTCH6_ISR                    
-0     00009b6d  _DSP28x_DisableInt              
-0     00009b71  _DSP28x_RestoreInt              
+0     00009b75  _DSP28x_DisableInt              
+0     00009b79  _DSP28x_RestoreInt              
 0     0000802a  _DSP28x_usDelay                 
 1     00000880  _DevEmuRegs                     
-0     000094af  _DisableDog                     
+0     000095a7  _DisableDog                     
 1     00001000  _DmaRegs                        
 0     00009294  _ECAN0INTA_ISR                  
 0     000092a8  _ECAN0INTB_ISR                  
@@ -643,7 +642,7 @@ page  address   name
 0     000091c2  _EQEP2_INT_ISR                  
 1     00006b00  _EQep1Regs                      
 1     00006b40  _EQep2Regs                      
-0     00009aba  _EnableInterrupts               
+0     00009ac2  _EnableInterrupts               
 1     00000a80  _FlashRegs                      
 1     00006f80  _GpioCtrlRegs                   
 1     00006fc0  _GpioDataRegs                   
@@ -654,27 +653,27 @@ page  address   name
 0     0000903c  _ILLEGAL_ISR                    
 0     00009000  _INT13_ISR                      
 0     0000900a  _INT14_ISR                      
-0     00009b24  _InitAdc                        
-0     00009752  _InitEPwm                       
-0     00009760  _InitEPwm1Gpio                  
-0     00009772  _InitEPwm2Gpio                  
-0     00009784  _InitEPwm3Gpio                  
-0     00009798  _InitEPwm4Gpio                  
-0     000097ac  _InitEPwm5Gpio                  
-0     000097be  _InitEPwm6Gpio                  
-0     00009753  _InitEPwmGpio                   
-0     000097d0  _InitEPwmSyncGpio               
-0     00009507  _InitPeripheralClocks           
-0     00009a9b  _InitPieCtrl                    
-0     00009ae7  _InitPieVectTable               
-0     000094b7  _InitPll                        
-0     00009986  _InitSci                        
-0     00009987  _InitSciGpio                    
-0     0000998e  _InitSciaGpio                   
-0     000099a3  _InitScibGpio                   
-0     000099b7  _InitScicGpio                   
-0     0000949c  _InitSysCtrl                    
-0     000097e4  _InitTzGpio                     
+0     00009b2c  _InitAdc                        
+0     0000975e  _InitEPwm                       
+0     0000976c  _InitEPwm1Gpio                  
+0     0000977e  _InitEPwm2Gpio                  
+0     00009790  _InitEPwm3Gpio                  
+0     000097a4  _InitEPwm4Gpio                  
+0     000097b8  _InitEPwm5Gpio                  
+0     000097ca  _InitEPwm6Gpio                  
+0     0000975f  _InitEPwmGpio                   
+0     000097dc  _InitEPwmSyncGpio               
+0     000095ff  _InitPeripheralClocks           
+0     00009aa3  _InitPieCtrl                    
+0     00009aef  _InitPieVectTable               
+0     000095af  _InitPll                        
+0     00009992  _InitSci                        
+0     00009993  _InitSciGpio                    
+0     0000999a  _InitSciaGpio                   
+0     000099af  _InitScibGpio                   
+0     000099c3  _InitScicGpio                   
+0     00009594  _InitSysCtrl                    
+0     000097f0  _InitTzGpio                     
 0     000092f8  _LUF_ISR                        
 0     000092ee  _LVF_ISR                        
 0     000091f4  _MRINTA_ISR                     
@@ -690,7 +689,7 @@ page  address   name
 1     00000d00  _PieVectTable                   
 1     0000d000  _PieVectTableInit               
 0     0000901e  _RTOSINT_ISR                    
-0     000099cd  _SCIRXINTA_IRQn                 
+0     000099d9  _SCIRXINTA_IRQn                 
 0     0000926c  _SCIRXINTA_ISR                  
 0     00009280  _SCIRXINTB_ISR                  
 0     00009258  _SCIRXINTC_ISR                  
@@ -704,8 +703,8 @@ page  address   name
 1     00007050  _SciaRegs                       
 1     00007750  _ScibRegs                       
 1     00007770  _ScicRegs                       
-0     000094a5  _ServiceDog                     
-0     00009b74  _SetDBGIER                      
+0     0000959d  _ServiceDog                     
+0     00009b7c  _SetDBGIER                      
 1     00007040  _SpiaRegs                       
 1     00007010  _SysCtrlRegs                    
 0     000090f0  _TINT0_ISR                      
@@ -742,53 +741,53 @@ abs   ffffffff  ___TI_prof_data_start
 abs   ffffffff  ___binit__                      
 abs   ffffffff  ___c_args__                     
 0     00008000  ___cinit__                      
-0     00009b7a  ___etext__                      
+0     00009b82  ___etext__                      
 abs   ffffffff  ___pinit__                      
 0     00009000  ___text__                       
-0     00009b4a  __args_main                     
+0     00009b52  __args_main                     
 1     0000c256  __lock                          
-0     00009b64  __nop                           
-0     00009b60  __register_lock                 
-0     00009b5c  __register_unlock               
+0     00009b6c  __nop                           
+0     00009b68  __register_lock                 
+0     00009b64  __register_unlock               
 1     00000400  __stack                         
-0     00009b79  __system_post_cinit             
-0     00009b77  __system_pre_init               
+0     00009b81  __system_post_cinit             
+0     00009b7f  __system_pre_init               
 1     0000c258  __unlock                        
-0     00009a72  _abort                          
-0     00009881  _adjustVoltage                  
-0     00009930  _c_int00                        
+0     00009a7a  _abort                          
+0     0000988d  _adjustVoltage                  
+0     0000993c  _c_int00                        
 1     0000c25b  _convertOKFlag                  
-0     00009ac3  _copy_in                        
-0     00009724  _crc32                          
+0     00009acb  _copy_in                        
+0     00009730  _crc32                          
 1     0000c254  _crc32Code                      
 1     0000c220  _elecCalData                    
 1     0000c228  _elecData                       
-0     00009a74  _exit                           
-0     0000971a  _getAbsValue                    
-0     0000970c  _getStringLength                
-0     00009b38  _initGlobalVar                  
-0     00009a0b  _main                           
-0     00009b07  _memcpy                         
-0     0000967f  _numToStr                       
+0     00009a7c  _exit                           
+0     00009726  _getAbsValue                    
+0     00009718  _getStringLength                
+0     00009b40  _initGlobalVar                  
+0     00009a17  _main                           
+0     00009b0f  _memcpy                         
+0     0000968b  _numToStr                       
 1     0000c21a  _power                          
-0     0000981a  _pwmInit                        
+0     00009826  _pwmInit                        
 1     0000c000  _receiveBuffer                  
 1     0000c218  _receiveOKFlag                  
 0     0000930c  _rsvd_ISR                       
 1     0000c100  _sendBuffer                     
-0     000095d6  _sendElecData                   
-0     000096e4  _strToNum                       
+0     000094df  _sendElecData                   
+0     000096f0  _strToNum                       
 1     0000d100  _tempTable                      
-0     000098cf  _uartInit                       
-0     00009927  _uartReceiveByte                
-0     0000990f  _uartSendByte                   
-0     0000991b  _uartSendString                 
-0     00009593  _updateUserSettingParamater     
+0     000098db  _uartInit                       
+0     00009933  _uartReceiveByte                
+0     0000991b  _uartSendByte                   
+0     00009927  _uartSendString                 
+0     0000949c  _updateUserSettingParamater     
 1     0000c21c  _useData                        
 abs   ffffffff  binit                           
 0     00008000  cinit                           
 0     00000000  code_start                      
-0     00009b7a  etext                           
+0     00009b82  etext                           
 abs   ffffffff  pinit                           
 
 
@@ -884,68 +883,68 @@ page  address   name
 0     00009316  _ADCInit                        
 0     00009346  _ADCReadValue                   
 0     000093bd  _ADCConvertCalData              
-0     0000949c  _InitSysCtrl                    
-0     000094a5  _ServiceDog                     
-0     000094af  _DisableDog                     
-0     000094b7  _InitPll                        
-0     00009507  _InitPeripheralClocks           
-0     00009562  _CsmUnlock                      
-0     00009593  _updateUserSettingParamater     
-0     000095d6  _sendElecData                   
-0     0000967f  _numToStr                       
-0     000096e4  _strToNum                       
-0     0000970c  _getStringLength                
-0     0000971a  _getAbsValue                    
-0     00009724  _crc32                          
-0     00009752  _InitEPwm                       
-0     00009753  _InitEPwmGpio                   
-0     00009760  _InitEPwm1Gpio                  
-0     00009772  _InitEPwm2Gpio                  
-0     00009784  _InitEPwm3Gpio                  
-0     00009798  _InitEPwm4Gpio                  
-0     000097ac  _InitEPwm5Gpio                  
-0     000097be  _InitEPwm6Gpio                  
-0     000097d0  _InitEPwmSyncGpio               
-0     000097e4  _InitTzGpio                     
-0     0000981a  _pwmInit                        
-0     00009881  _adjustVoltage                  
-0     000098cf  _uartInit                       
-0     0000990f  _uartSendByte                   
-0     0000991b  _uartSendString                 
-0     00009927  _uartReceiveByte                
-0     00009930  _c_int00                        
-0     00009986  _InitSci                        
-0     00009987  _InitSciGpio                    
-0     0000998e  _InitSciaGpio                   
-0     000099a3  _InitScibGpio                   
-0     000099b7  _InitScicGpio                   
-0     000099cd  _SCIRXINTA_IRQn                 
-0     00009a0b  _main                           
-0     00009a48  L$$DIV                          
-0     00009a57  L$$MOD                          
-0     00009a65  UL$$DIV                         
-0     00009a6c  UL$$MOD                         
-0     00009a72  C$$EXIT                         
-0     00009a72  _abort                          
-0     00009a74  _exit                           
-0     00009a9b  _InitPieCtrl                    
-0     00009aba  _EnableInterrupts               
-0     00009ac3  _copy_in                        
-0     00009ae7  _InitPieVectTable               
-0     00009b07  _memcpy                         
-0     00009b24  _InitAdc                        
-0     00009b38  _initGlobalVar                  
-0     00009b4a  __args_main                     
-0     00009b5c  __register_unlock               
-0     00009b60  __register_lock                 
-0     00009b64  __nop                           
-0     00009b6d  _DSP28x_DisableInt              
-0     00009b71  _DSP28x_RestoreInt              
-0     00009b74  _SetDBGIER                      
-0     00009b77  __system_pre_init               
-0     00009b79  __system_post_cinit             
-0     00009b7a  ___etext__                      
-0     00009b7a  etext                           
+0     0000949c  _updateUserSettingParamater     
+0     000094df  _sendElecData                   
+0     00009594  _InitSysCtrl                    
+0     0000959d  _ServiceDog                     
+0     000095a7  _DisableDog                     
+0     000095af  _InitPll                        
+0     000095ff  _InitPeripheralClocks           
+0     0000965a  _CsmUnlock                      
+0     0000968b  _numToStr                       
+0     000096f0  _strToNum                       
+0     00009718  _getStringLength                
+0     00009726  _getAbsValue                    
+0     00009730  _crc32                          
+0     0000975e  _InitEPwm                       
+0     0000975f  _InitEPwmGpio                   
+0     0000976c  _InitEPwm1Gpio                  
+0     0000977e  _InitEPwm2Gpio                  
+0     00009790  _InitEPwm3Gpio                  
+0     000097a4  _InitEPwm4Gpio                  
+0     000097b8  _InitEPwm5Gpio                  
+0     000097ca  _InitEPwm6Gpio                  
+0     000097dc  _InitEPwmSyncGpio               
+0     000097f0  _InitTzGpio                     
+0     00009826  _pwmInit                        
+0     0000988d  _adjustVoltage                  
+0     000098db  _uartInit                       
+0     0000991b  _uartSendByte                   
+0     00009927  _uartSendString                 
+0     00009933  _uartReceiveByte                
+0     0000993c  _c_int00                        
+0     00009992  _InitSci                        
+0     00009993  _InitSciGpio                    
+0     0000999a  _InitSciaGpio                   
+0     000099af  _InitScibGpio                   
+0     000099c3  _InitScicGpio                   
+0     000099d9  _SCIRXINTA_IRQn                 
+0     00009a17  _main                           
+0     00009a50  L$$DIV                          
+0     00009a5f  L$$MOD                          
+0     00009a6d  UL$$DIV                         
+0     00009a74  UL$$MOD                         
+0     00009a7a  C$$EXIT                         
+0     00009a7a  _abort                          
+0     00009a7c  _exit                           
+0     00009aa3  _InitPieCtrl                    
+0     00009ac2  _EnableInterrupts               
+0     00009acb  _copy_in                        
+0     00009aef  _InitPieVectTable               
+0     00009b0f  _memcpy                         
+0     00009b2c  _InitAdc                        
+0     00009b40  _initGlobalVar                  
+0     00009b52  __args_main                     
+0     00009b64  __register_unlock               
+0     00009b68  __register_lock                 
+0     00009b6c  __nop                           
+0     00009b75  _DSP28x_DisableInt              
+0     00009b79  _DSP28x_RestoreInt              
+0     00009b7c  _SetDBGIER                      
+0     00009b7f  __system_pre_init               
+0     00009b81  __system_post_cinit             
+0     00009b82  ___etext__                      
+0     00009b82  etext                           
 0     00380080  _ADC_cal                        
 1     00000400  __stack                         
 1     00000700  __STACK_END                     

@@ -1,14 +1,6 @@
 eclipse.preferences.version=1
 encoding//Debug/Hardware/subdir_rules.mk=UTF-8
 encoding//Debug/Hardware/subdir_vars.mk=UTF-8
-encoding//Debug/Stdlib/common/cmd/subdir_rules.mk=UTF-8
-encoding//Debug/Stdlib/common/cmd/subdir_vars.mk=UTF-8
-encoding//Debug/Stdlib/common/source/subdir_rules.mk=UTF-8
-encoding//Debug/Stdlib/common/source/subdir_vars.mk=UTF-8
-encoding//Debug/Stdlib/headers/cmd/subdir_rules.mk=UTF-8
-encoding//Debug/Stdlib/headers/cmd/subdir_vars.mk=UTF-8
-encoding//Debug/Stdlib/headers/source/subdir_rules.mk=UTF-8
-encoding//Debug/Stdlib/headers/source/subdir_vars.mk=UTF-8
 encoding//Debug/Stdlib/source/subdir_rules.mk=UTF-8
 encoding//Debug/Stdlib/source/subdir_vars.mk=UTF-8
 encoding//Debug/User/subdir_rules.mk=UTF-8

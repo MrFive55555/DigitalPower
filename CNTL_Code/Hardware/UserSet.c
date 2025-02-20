@@ -67,6 +67,8 @@ void sendElecData(void)
     {
         sendBuffer[length++] = (crc32Code >> (8 * i)) & 0xff;
     }
+    sendBuffer[length++]='\r';
+    sendBuffer[length++]='\n';
     sendBuffer[length] = '\0'; // just for print , don't be used to send
     // total 6+23+1+4=34 bytes , length is 33
     uartSendString(sendBuffer);

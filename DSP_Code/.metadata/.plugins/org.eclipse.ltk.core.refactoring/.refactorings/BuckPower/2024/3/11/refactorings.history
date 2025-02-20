@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;BuckPower/Hardware/Pwm.c&apos; to &apos;PWM.c&apos;" description="Rename resource &apos;Pwm.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Hardware/Pwm.c" name="PWM.c" stamp="1710056554977" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;BuckPower/Hardware/Pwm.h&apos; to &apos;PWM.h&apos;" description="Rename resource &apos;Pwm.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Hardware/Pwm.h" name="PWM.h" stamp="1710056563978" updateReferences="true"/>
-</session>

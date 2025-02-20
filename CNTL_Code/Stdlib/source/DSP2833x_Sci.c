@@ -106,23 +106,28 @@ InitSciaGpio()
     // Pull-ups can be enabled or disabled disabled by the user.  
     // This will enable the pullups for the specified pins.
     //
-    GpioCtrlRegs.GPAPUD.bit.GPIO28 = 0;  // Enable pull-up for GPIO28 (SCIRXDA)
-    GpioCtrlRegs.GPAPUD.bit.GPIO29 = 0;	 // Enable pull-up for GPIO29 (SCITXDA)
+    //GpioCtrlRegs.GPAPUD.bit.GPIO28 = 0;  // Enable pull-up for GPIO28 (SCIRXDA)
+    //GpioCtrlRegs.GPAPUD.bit.GPIO29 = 0;	 // Enable pull-up for GPIO29 (SCITXDA)
+    GpioCtrlRegs.GPBPUD.bit.GPIO36 = 0;  // Enable pull-up for GPIO28 (SCIRXDA)
+    GpioCtrlRegs.GPBPUD.bit.GPIO35 = 0;    // Enable pull-up for GPIO29 (SCITXDA)
 
     //
     // Set qualification for selected pins to asynch only
     // Inputs are synchronized to SYSCLKOUT by default.  
     // This will select asynch (no qualification) for the selected pins.
     //
-    GpioCtrlRegs.GPAQSEL2.bit.GPIO28 = 3;  // Asynch input GPIO28 (SCIRXDA)
+    //GpioCtrlRegs.GPAQSEL2.bit.GPIO28 = 3;  // Asynch input GPIO28 (SCIRXDA)
+    GpioCtrlRegs.GPBQSEL1.bit.GPIO36 = 3;
     
     //
     // Configure SCI-A pins using GPIO regs
     // This specifies which of the possible GPIO pins will be SCI functional
     // pins.
     //
-    GpioCtrlRegs.GPAMUX2.bit.GPIO28 = 1;   // Configure GPIO28 to SCIRXDA 
-    GpioCtrlRegs.GPAMUX2.bit.GPIO29 = 1;   // Configure GPIO29 to SCITXDA 
+    //GpioCtrlRegs.GPAMUX2.bit.GPIO28 = 1;   // Configure GPIO28 to SCIRXDA
+    //GpioCtrlRegs.GPAMUX2.bit.GPIO29 = 1;   // Configure GPIO29 to SCITXDA
+    GpioCtrlRegs.GPBMUX1.bit.GPIO36 = 1;   // Configure GPIO28 to SCIRXDA
+    GpioCtrlRegs.GPBMUX1.bit.GPIO35 = 1;   // Configure GPIO29 to SCITXDA
 
     EDIS;
 }

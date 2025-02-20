@@ -25,9 +25,10 @@ void main(void)
     //initialize module
     initGlobalVar();
     ADCInit();
-    uartInit(9600, PORTB);
+    uartInit(9600, PORTA);
     pwmInit(3000); //150M/(2999+1) = 50KHZ
     adjustVoltage(POWER_ON);
+    uartSendString("all init compeleted.\r\n");
     while (1)
     {
         if (receiveOKFlag)

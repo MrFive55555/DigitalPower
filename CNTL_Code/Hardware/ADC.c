@@ -137,9 +137,9 @@ void ADCInit(void)
     calAdjust.tempVolAdjust = 0;
     calAdjust.currentAdjust = 0;
 }
-Uint16 calCount = 0;
 Uint16 ADCReadValue(void)
 {
+    static Uint16 calCount = 0;
     //static Uint16 calCount = 0;
     //wait for ADC convert complete
     while (AdcRegs.ADCST.bit.INT_SEQ1 != 1) 
@@ -148,8 +148,7 @@ Uint16 ADCReadValue(void)
     samplingValue[1] += AdcRegs.ADCRESULT1 >> 4;
     samplingValue[2] += AdcRegs.ADCRESULT2 >> 4;
     samplingValue[3] += AdcRegs.ADCRESULT3 >> 4;
-    AdcRegs.ADCST.bit.INT_SEQ1_CLR = 1; // clear flag bit
-
+	
     if ((++calCount >= SAMPLING_COUNT) && (samplingOkFlag != 1))
     {
         elecCalData.outputVol = samplingValue[3] / SAMPLING_COUNT;
@@ -161,6 +160,7 @@ Uint16 ADCReadValue(void)
         calCount = 0;
         samplingOkFlag = 1;
     }
+	AdcRegs.ADCST.bit.INT_SEQ1_CLR = 1; // clear flag bit
 
     return 1;
 }
